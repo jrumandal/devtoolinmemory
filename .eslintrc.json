@@ -1,0 +1,15 @@
+{
+    "extends": "standard",
+    "globals": {
+        "$": true
+    },
+    "rules": {
+        "semi": 0
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jquery": true
+    }
+}
