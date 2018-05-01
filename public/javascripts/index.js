@@ -10,10 +10,12 @@ function Memory () {
   this.selected = {
     first: undefined, second: undefined
   };
+
+  this.init = function () {
+    this.bindEvents();
+  };
   /** Method that should be called as first method after instantiation */
   this.initGame = function initGame () {
-    this.bindEvents();
-
     this.couples.forEach(letter => {
       this.assignCard(letter);
       this.assignCard(letter);
@@ -63,8 +65,3 @@ function Memory () {
     this.selected.second.addClass('blocked');
   };
 }
-
-$(document).ready(function () {
-  var p = new Memory();
-  p.initGame();
-});

@@ -3,6 +3,8 @@ extends layout
 block head
   link(rel='stylesheet', href='/stylesheets/flip-card.css')
   script(src="./javascripts/index.js")
+  script(src="./javascripts/tools.inizia.js")
+  script(src="./javascripts/tools.reset.js")
 block content
   .container-fluid
     .row
@@ -15,11 +17,11 @@ block content
               label(for="") Prompts
               .row
                 .col-12
-                  button.btn.btn-sm.btn-default#initGame Inizia
-          .col-7
-            .form-group
-              label(for='counterTries') Tentativi:
-              input.form-control.input-sm(readonly)#counterTries
+                  button.btn.btn-sm.btn-default#initGame(onclick='reset()') Reset
+          //- .col-7
+          //-   .form-group
+          //-     label(for='counterTries') Tentativi:
+          //-     input.form-control.input-sm(readonly)#counterTries
     .row
       .col-12.grid
         .row
