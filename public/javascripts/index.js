@@ -2,6 +2,7 @@
  * Memory game object constructor that defines the essential elements and behaviors required to reproduce basic functionalities of the game.
  */
 function Memory () {
+  if (Object.assign !== undefined) console.log('You are running modern browser');
   /** List of element cards */
   this.$cards = $('.flip-container');
   /** Facecards array */
@@ -16,10 +17,9 @@ function Memory () {
   };
   /** Method that should be called as first method after instantiation */
   this.initGame = function initGame () {
-    var that = this;
-    this.couples.forEach(function (letter) {
-      that.assignCard(letter);
-      that.assignCard(letter);
+    this.couples.forEach((letter) => {
+      this.assignCard(letter);
+      this.assignCard(letter);
     });
   };
   /**

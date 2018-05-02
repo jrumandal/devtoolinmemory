@@ -1,9 +1,11 @@
 function inizia () {
-  this.memory = new Memory();
-  this.memory.init();
-  this.memory.initGame();
+  var memory = new Memory();
+  memory.init();
+  memory.initGame();
 }
 
-$(document).ready(function () {
+$(document).ready(() => {
   inizia();
+
+  console.log(Object.assign)
 });
