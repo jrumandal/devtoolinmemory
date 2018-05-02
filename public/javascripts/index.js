@@ -16,9 +16,10 @@ function Memory () {
   };
   /** Method that should be called as first method after instantiation */
   this.initGame = function initGame () {
-    this.couples.forEach(letter => {
-      this.assignCard(letter);
-      this.assignCard(letter);
+    var that = this;
+    this.couples.forEach(function (letter) {
+      that.assignCard(letter);
+      that.assignCard(letter);
     });
   };
   /**

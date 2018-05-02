@@ -3,20 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "script:build": "gulp "
   },
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11"
   },
   "nodemonConfig": {
     "ignore": [
-      "node_modules/*",
-      "public/*"
+      "node_modules/**",
+      "public/**"
     ],
     "delay": "2500"
   },
@@ -26,6 +29,14 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
   }
 }
